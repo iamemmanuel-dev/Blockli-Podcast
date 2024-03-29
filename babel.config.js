@@ -15,6 +15,8 @@ module.exports = function (api) {
             '@hooks/*': './src/Hooks',
             '@constants': './src/Constants',
             '@UILibrary': './src/UILibrary',
+            '@metrics': './src/Metrics',
+            '@Utilities/*': './src/Utilities',
             '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },
         },
