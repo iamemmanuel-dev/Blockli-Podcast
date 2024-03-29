@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler'
+import { useEffect } from 'react'
+import * as SplashScreen from 'expo-splash-screen'
+import { useFonts } from 'expo-font'
+import { StatusBar } from 'expo-status-bar'
+
+SplashScreen.preventAutoHideAsync()
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    Urbanist_Regular: require('@fonts/Urbanist-Regular.ttf'),
+    Urbanist_Medium: require('@fonts/Urbanist-Medium.ttf'),
+    Urbanist_SemiBold: require('@fonts/Urbanist-SemiBold.ttf'),
+    Urbanist_Bold: require('@fonts/Urbanist-Bold.ttf'),
+  })
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  useEffect(() => {
+    const loadFonts = async () => {
+      if (fontsLoaded) {
+        await SplashScreen.hideAsync()
+      }
+    }
+
+    loadFonts()
+  }, [fontsLoaded])
+
+  if (!fontsLoaded) {
+    return null
+  }
+
+  return <StatusBar translucent />
+}
