@@ -12,6 +12,8 @@ module.exports = function (api) {
             '@appIcons': './assets/appIcons',
             '@navigation/*': './src/Navigation/*',
             '@theme': './src/Theme',
+            '@hooks/*': './src/Hooks',
+            '@constants': './src/Constants',
             '@UILibrary': './src/UILibrary',
             '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },

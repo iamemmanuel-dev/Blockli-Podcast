@@ -10,6 +10,8 @@
       "@navigation/*": ["./src/Navigation/*"],
       "@theme": ["./src/Theme"],
       "@UILibrary/*": ["./src/UILibrary/*"],
+      "@constants": ["./src/Constants"],
+      "@hooks/*": ["./src/Hooks/*"],
       "@dashboardScreens/*": ["./src/Screens/Dashboard/*"]
     }
   }
