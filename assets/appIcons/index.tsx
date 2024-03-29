@@ -71,3 +71,23 @@ export const UserIcon = (props: SvgProps) => (
     />
   </Svg>
 )
+
+export const BellIcon = (props: SvgProps) => (
+  <Svg width={20} height={24} fill='none' {...props}>
+    <Path
+      stroke='#212121'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={1.5}
+      d='M9.996.933c-5.174 0-7.422 4.685-7.422 7.781 0 2.315.336 1.634-.945 4.457-1.565 4.023 4.727 5.668 8.367 5.668 3.638 0 9.93-1.645 8.366-5.668-1.28-2.823-.945-2.142-.945-4.457 0-3.096-2.25-7.78-7.421-7.78Z'
+      clipRule='evenodd'
+    />
+    <Path
+      stroke='#212121'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={1.5}
+      d='M12.69 21.93c-1.51 1.688-3.865 1.708-5.39 0'
+    />
+  </Svg>
+)

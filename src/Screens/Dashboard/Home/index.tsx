@@ -1,11 +1,11 @@
-import UIView from '@UILibrary/UIView'
-import UIText from '@UILibrary/UIText'
+import Screen from '@Utilities/Screen'
+import HeaderSection from './sections/Header'
 
 const HomeScreen = () => {
   return (
-    <UIView flex={1} center>
-      <UIText>Home</UIText>
-    </UIView>
+    <Screen>
+      <HeaderSection />
+    </Screen>
   )
 }
 

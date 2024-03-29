@@ -3,7 +3,7 @@ import { Dimensions } from 'react-native'
 const metrics = {
   SCREEN_HEIGHT: Dimensions.get('screen').height,
   SCREEN_WIDTH: Dimensions.get('screen').width,
-  SCREEN_HORIZONTAL_PADDING: 15,
+  SCREEN_HORIZONTAL_PADDING: 20,
   SCREEN_BOTTOM_PADDING: 20,
 
   BASE_GAP: 20,
