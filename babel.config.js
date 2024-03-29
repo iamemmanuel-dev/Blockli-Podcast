@@ -9,7 +9,11 @@ module.exports = function (api) {
           alias: {
             src: './src',
             '@fonts': './assets/fonts',
+            '@appIcons': './assets/appIcons',
             '@navigation/*': './src/Navigation/*',
+            '@theme': './src/Theme',
+            '@UILibrary': './src/UILibrary',
+            '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },
         },
       ],

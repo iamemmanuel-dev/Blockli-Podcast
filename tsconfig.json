@@ -6,7 +6,11 @@
     "paths": {
       "src/*": ["./src/*"],
       "@fonts": ["./assets/fonts"],
-      "@navigation/*": ["./src/Navigation/*"]
+      "@appIcons": ["./assets/appIcons"],
+      "@navigation/*": ["./src/Navigation/*"],
+      "@theme": ["./src/Theme"],
+      "@UILibrary/*": ["./src/UILibrary/*"],
+      "@dashboardScreens/*": ["./src/Screens/Dashboard/*"]
     }
   }
 }
