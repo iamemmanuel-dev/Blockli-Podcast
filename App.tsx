@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import * as SplashScreen from 'expo-splash-screen'
 import { useFonts } from 'expo-font'
 import { StatusBar } from 'expo-status-bar'
+import RootNavigator from '@navigation/RootNavigator'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -28,5 +29,10 @@ export default function App() {
     return null
   }
 
-  return <StatusBar translucent />
+  return (
+    <>
+      <StatusBar translucent />
+      <RootNavigator />
+    </>
+  )
 }

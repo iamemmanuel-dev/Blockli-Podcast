@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "src/*": ["./src/*"],
-      "@fonts": ["./assets/fonts"]
+      "@fonts": ["./assets/fonts"],
+      "@navigation/*": ["./src/Navigation/*"]
     }
   }
 }
