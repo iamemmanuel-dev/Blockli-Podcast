@@ -20,6 +20,7 @@ module.exports = function (api) {
             '@Utilities/*': './src/Utilities',
             '@data/*': './src/Data/*',
             '@globalStyles': './src/Globals/styles',
+            '@reusables/*': './src/Reusables/*',
             '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },
         },
