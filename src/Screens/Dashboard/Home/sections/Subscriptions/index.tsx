@@ -14,7 +14,7 @@ import globalStyles from '@globalStyles'
 
 const SubscriptionsSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const onTapOnSeeAll = () => navigation.navigate('SubscriptionsScreen')
+  const onTapOnSeeAll = () => navigation.navigate('AllSubscriptionsScreen')
 
   const renderSubscriptions: ListRenderItem<{
     id: number

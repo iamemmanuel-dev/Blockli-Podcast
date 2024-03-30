@@ -7,7 +7,7 @@ import { SUBSCRIPTIONS_LIST } from '@data/index'
 import { SubscriptionListPropTypes } from '@data/interface'
 import SubscriptionTile from './components/SubscriptionTile'
 
-const SubscriptionsScreen = () => {
+const AllSubscriptionsScreen = () => {
   const renderSubscriptions: ListRenderItem<SubscriptionListPropTypes> = ({
     item,
   }) => <SubscriptionTile {...item} />
@@ -22,4 +22,4 @@ const SubscriptionsScreen = () => {
   )
 }
 
-export default SubscriptionsScreen
+export default AllSubscriptionsScreen

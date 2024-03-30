@@ -3,8 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 //SCREENS IMPORT
 import TabNavigator from '../TabNavigator'
-import SubscriptionsScreen from '@dashboardScreens/Subscriptions'
-import AllNewUpdatesScreen from 'src/Screens/Dashboard/AllNewUpdates'
+import AllSubscriptionsScreen from '@dashboardScreens/AllSubscriptions'
+import AllNewUpdatesScreen from '@dashboardScreens/AllNewUpdates'
 
 const RootNavigator = () => {
   const Stack = createNativeStackNavigator()
@@ -14,8 +14,8 @@ const RootNavigator = () => {
         <Stack.Screen name='Main' component={TabNavigator} />
 
         <Stack.Screen
-          name='SubscriptionsScreen'
-          component={SubscriptionsScreen}
+          name='AllSubscriptionsScreen'
+          component={AllSubscriptionsScreen}
         />
 
         <Stack.Screen

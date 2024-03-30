@@ -4,7 +4,7 @@ import {
 } from '@react-navigation/native-stack'
 
 export type ScreensParamList = {
-  SubscriptionsScreen: undefined
+  AllSubscriptionsScreen: undefined
   AllNewUpdatesScreen: undefined
 }
 
