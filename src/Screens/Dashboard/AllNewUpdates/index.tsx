@@ -2,10 +2,10 @@ import { FlatList } from 'react-native'
 import Screen from '@Utilities/Screen'
 import Wrapper from '@Utilities/Wrapper'
 import ScreenTitleView from '@reusables/ScreenTitleView'
-import NewUpdatesTile from '@reusables/NewUpdatesTile'
+import Podcast from '@reusables/Podcast'
 
 const NewUpdatesScreen = () => {
-  const renderNewUpdates = () => <NewUpdatesTile />
+  const renderNewUpdates = () => <Podcast />
 
   return (
     <Screen>

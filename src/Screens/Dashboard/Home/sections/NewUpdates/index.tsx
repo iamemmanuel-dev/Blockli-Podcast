@@ -4,11 +4,11 @@ import { useNavigationProp } from '@navigation/index.types'
 import Section from '@Utilities/Section'
 import SectionTitleView from '@Utilities/SectionTitleView'
 import Wrapper from '@Utilities/Wrapper'
-import NewUpdatesTile from '@reusables/NewUpdatesTile'
+import Podcast from '@reusables/Podcast'
 
 const NewUpdatesSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const renderNewUpdates = () => <NewUpdatesTile />
+  const renderNewUpdates = () => <Podcast />
 
   const onTapOnSeeAll = () => navigation.navigate('AllNewUpdatesScreen')
 
