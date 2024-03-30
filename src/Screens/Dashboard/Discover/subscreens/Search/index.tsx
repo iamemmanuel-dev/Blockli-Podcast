@@ -1,4 +1,5 @@
 import { FlatList } from 'react-native'
+import { NavigationProp } from '@navigation/index.types'
 import Screen from '@Utilities/Screen'
 import SafeArea from '@Utilities/SafeArea'
 import SectionTitleView from '@Utilities/SectionTitleView'
@@ -8,12 +9,15 @@ import UIView from '@UILibrary/UIView'
 import theme from '@theme'
 import RecentSearch from './components/RecentSearch'
 
-const SearchScreen = () => {
+const SearchScreen = ({ navigation }: NavigationProp) => {
   const onTapOnClearAll = () => {}
+
+  const onSearchSelect = () => navigation.navigate('SearchResultScreen')
+
   const renderRecentSearches = () => (
     <RecentSearch
       search='How Our Brains Construct Reality'
-      onSearchSelect={() => {}}
+      onSearchSelect={onSearchSelect}
       onSearchDelete={() => {}}
     />
   )

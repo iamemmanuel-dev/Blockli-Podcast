@@ -7,6 +7,7 @@ export type ScreensParamList = {
   AllSubscriptionsScreen: undefined
   AllNewUpdatesScreen: undefined
   SearchScreen: undefined
+  SearchResultScreen: undefined
 }
 
 export type NavigationProp = NativeStackScreenProps<ScreensParamList>
