@@ -1,4 +1,6 @@
-import { FlatList, ListRenderItem } from 'react-native'
+import { FlatList, ImageSourcePropType, ListRenderItem } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { useNavigationProp } from '@navigation/index.types'
 import Section from '@Utilities/Section'
 import SectionTitleView from '@Utilities/SectionTitleView'
 import Wrapper from '@Utilities/Wrapper'
@@ -11,9 +13,12 @@ import { SUBSCRIPTIONS } from '@data/index'
 import globalStyles from '@globalStyles'
 
 const SubscriptionsSection = () => {
+  const navigation = useNavigation<useNavigationProp>()
+  const onTapOnSeeAll = () => navigation.navigate('SubscriptionsScreen')
+
   const renderSubscriptions: ListRenderItem<{
     id: number
-    image: any
+    image: ImageSourcePropType
   }> = ({ item }) => (
     <UIPressable key={item.id} width={90} height={90} radius={20}>
       <UIImage source={item.image} radius={20} />
@@ -33,7 +38,7 @@ const SubscriptionsSection = () => {
             Subscriptions
           </UIText>
 
-          <UIPressable hitSlop={metrics.makeHitSlop()}>
+          <UIPressable hitSlop={metrics.makeHitSlop()} onPress={onTapOnSeeAll}>
             <UIText
               family='Urbanist_Bold'
               size={16}

@@ -21,6 +21,7 @@ module.exports = function (api) {
             '@data/*': './src/Data/*',
             '@globalStyles': './src/Globals/styles',
             '@reusables/*': './src/Reusables/*',
+            '@helpers/*': './src/Helpers/*',
             '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },
         },
