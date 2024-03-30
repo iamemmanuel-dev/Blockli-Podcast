@@ -1,4 +1,6 @@
 import { FlatList } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { useNavigationProp } from '@navigation/index.types'
 import UIPressable from '@UILibrary/UIPressable'
 import UIText from '@UILibrary/UIText'
 import Section from '@Utilities/Section'
@@ -9,7 +11,10 @@ import metrics from '@metrics'
 import theme from '@theme'
 
 const NewUpdatesSection = () => {
+  const navigation = useNavigation<useNavigationProp>()
   const renderNewUpdates = () => <NewUpdatesTile />
+
+  const onTapOnSeeAll = () => navigation.navigate('AllNewUpdatesScreen')
 
   return (
     <Section>
@@ -24,7 +29,7 @@ const NewUpdatesSection = () => {
             New Updates
           </UIText>
 
-          <UIPressable hitSlop={metrics.makeHitSlop()}>
+          <UIPressable hitSlop={metrics.makeHitSlop()} onPress={onTapOnSeeAll}>
             <UIText
               family='Urbanist_Bold'
               size={16}

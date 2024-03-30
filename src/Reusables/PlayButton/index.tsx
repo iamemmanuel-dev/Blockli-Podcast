@@ -9,7 +9,7 @@ const PlayButton: React.FC<PlayButtonPropTypes> = props => {
     <UIPressable
       onPress={props.onPlay}
       bgCol={theme.primary}
-      py={5}
+      py={3}
       px={15}
       alignSelf='flex-start'
       flexDir='row'

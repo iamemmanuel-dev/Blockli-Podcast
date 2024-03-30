@@ -13,7 +13,7 @@ const NewUpdatesTile = () => {
 
   return (
     <UIView flexDir='row' colGap={15} mb={metrics.BASE_GAP}>
-      <UIView flex={0.5} radius={20} height={100}>
+      <UIView flex={0.5} radius={20} height={116}>
         <UIImage source={require('@images/img3.png')} radius={20} />
       </UIView>
 
