@@ -7,7 +7,7 @@ import globalStyles from '@globalStyles'
 
 const UISearchInput = () => {
   return (
-    <Wrapper>
+    <Wrapper mb={20}>
       <UIView
         height={56}
         bgCol={theme.grey6}
