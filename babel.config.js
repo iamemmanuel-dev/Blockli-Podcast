@@ -18,6 +18,8 @@ module.exports = function (api) {
             '@UILibrary': './src/UILibrary',
             '@metrics': './src/Metrics',
             '@Utilities/*': './src/Utilities',
+            '@data/*': './src/Data/*',
+            '@globalStyles': './src/Globals/styles',
             '@dashboardScreens/*': './src/Screens/Dashboard/*',
           },
         },
