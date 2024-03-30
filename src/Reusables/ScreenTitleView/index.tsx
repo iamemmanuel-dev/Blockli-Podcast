@@ -5,7 +5,7 @@ import UIText from '@UILibrary/UIText'
 import UIView from '@UILibrary/UIView'
 import SafeArea from '@Utilities/SafeArea'
 import Wrapper from '@Utilities/Wrapper'
-import { BackIcon, ChainIcon, CircleEllipsisIcon } from '@appIcons'
+import { BackIcon, ChainIcon, CircleEllipsisIcon, MicIcon } from '@appIcons'
 import metrics from '@metrics'
 import theme from '@theme'
 import { ScreenTitleViewPropTypes } from './interface'
@@ -18,9 +18,13 @@ const ScreenTitleView: React.FC<ScreenTitleViewPropTypes> = props => {
     <SafeArea>
       <Wrapper flexDir='row' align='center' mt={20} mb={30}>
         <UIView flex={1} flexDir='row' align='center' colGap={15}>
-          <UIPressable hitSlop={metrics.makeHitSlop()} onPress={onBackPress}>
-            <BackIcon />
-          </UIPressable>
+          {props.withMicIcon ? (
+            <MicIcon />
+          ) : (
+            <UIPressable hitSlop={metrics.makeHitSlop()} onPress={onBackPress}>
+              <BackIcon />
+            </UIPressable>
+          )}
 
           <UIText
             family='Urbanist_Bold'

@@ -1,4 +1,11 @@
-import Svg, { Path, SvgProps, Circle } from 'react-native-svg'
+import Svg, {
+  Path,
+  SvgProps,
+  Circle,
+  LinearGradient,
+  Stop,
+  Defs,
+} from 'react-native-svg'
 
 export const HomeIcon = (props: SvgProps) => (
   <Svg width={20} height={20} fill='none' {...props}>
@@ -172,5 +179,44 @@ export const CircleEllipsisIcon = (props: SvgProps) => (
       strokeWidth={2}
       d='M16.596 12.015h.01M11.919 12.015h.01M7.242 12.015h.01'
     />
+  </Svg>
+)
+
+export const MicIcon = (props: SvgProps) => (
+  <Svg width={22} height={27} fill='none' {...props}>
+    <Path
+      fill='url(#a)'
+      fillRule='evenodd'
+      d='M11 .667c-3.535 0-6.4 2.78-6.4 6.21v5.713c0 3.43 2.865 6.21 6.4 6.21 2.887 0 5.327-1.855 6.125-4.403a6.57 6.57 0 0 1-2.684 1.04c-.837.126-1.69.09-2.513-.104a6.538 6.538 0 0 1-2.28-1.03 6.37 6.37 0 0 1-1.138-1.035c-.342-.397-.192-.98.264-1.249.456-.27 1.044-.12 1.412.256a4.575 4.575 0 0 0 2.2 1.235c.575.136 1.173.161 1.759.073a4.6 4.6 0 0 0 1.653-.585 4.465 4.465 0 0 0 1.602-1.619V6.876c0-3.43-2.865-6.21-6.4-6.21Zm3.215 6.413c0 .967-.807 1.75-1.803 1.75-.996 0-1.803-.783-1.803-1.75 0-.966.807-1.749 1.803-1.749.996 0 1.803.783 1.803 1.75Z'
+      clipRule='evenodd'
+    />
+    <Path
+      fill='url(#b)'
+      d='M19.235 12.755c0-.664.545-1.2 1.216-1.2.671 0 1.216.536 1.216 1.2 0 5.4-4.14 9.86-9.45 10.46v2.416c0 .662-.545 1.2-1.216 1.2a1.208 1.208 0 0 1-1.216-1.2v-2.417C4.474 22.615.333 18.156.333 12.754c0-.663.545-1.2 1.216-1.2.67 0 1.216.537 1.216 1.2 0 4.484 3.694 8.133 8.236 8.133 4.54 0 8.234-3.649 8.234-8.132Z'
+    />
+    <Defs>
+      <LinearGradient
+        id='a'
+        x1={21.667}
+        x2={-4.396}
+        y1={26.831}
+        y2={20.67}
+        gradientUnits='userSpaceOnUse'
+      >
+        <Stop stopColor='#9610FF' />
+        <Stop offset={1} stopColor='#AF48FF' />
+      </LinearGradient>
+      <LinearGradient
+        id='b'
+        x1={21.667}
+        x2={-4.396}
+        y1={26.831}
+        y2={20.67}
+        gradientUnits='userSpaceOnUse'
+      >
+        <Stop stopColor='#9610FF' />
+        <Stop offset={1} stopColor='#AF48FF' />
+      </LinearGradient>
+    </Defs>
   </Svg>
 )

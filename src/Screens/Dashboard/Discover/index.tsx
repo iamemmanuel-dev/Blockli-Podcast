@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import Screen from '@Utilities/Screen'
+import UISearchInput from '@UILibrary/UISearchInput'
+import ScreenTitleView from '@reusables/ScreenTitleView'
 
 const DiscoverScreen = () => {
   return (
-    <View>
-      <Text>DiscoverScreen</Text>
-    </View>
+    <Screen>
+      <ScreenTitleView title='Discover' withMicIcon />
+      <UISearchInput />
+    </Screen>
   )
 }
 

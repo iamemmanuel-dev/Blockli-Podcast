@@ -1,1 +1,3 @@
-export type GlobalStylesKeyTypes = 'flatListHoriztontalContentContainerStyle'
+export type GlobalStylesKeyTypes =
+  | 'flatListHoriztontalContentContainerStyle'
+  | 'textInputStyles'
