@@ -1,5 +1,6 @@
 import { FlatList, ListRenderItem } from 'react-native'
 import ScreenTitleView from '@reusables/ScreenTitleView'
+import Podcast from '@reusables/Podcast'
 import Screen from '@Utilities/Screen'
 import Wrapper from '@Utilities/Wrapper'
 import UITabs from '@UILibrary/UITabs'
@@ -17,16 +18,25 @@ const LibraryScreen = () => {
     item,
   }) => <SubscriptionTile {...item} />
 
+  const renderQueues = () => <Podcast />
+
   return (
     <Screen>
       <ScreenTitleView title='Library' withMicIcon />
       <Wrapper flex={1}>
         <UITabs tabs={TABS} activeTab={activeTab} onTabSwitch={onTabSwitch} />
         <UIView my={30}>
-          <FlatList
-            data={SUBSCRIPTIONS_LIST}
-            renderItem={renderSubscriptions}
-          />
+          {activeTab === 'Subscriptions' ? (
+            <FlatList
+              data={SUBSCRIPTIONS_LIST}
+              renderItem={renderSubscriptions}
+            />
+          ) : (
+            <FlatList
+              data={Array.from({ length: 10 })}
+              renderItem={renderQueues}
+            />
+          )}
         </UIView>
       </Wrapper>
     </Screen>
