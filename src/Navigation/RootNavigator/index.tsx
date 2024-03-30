@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import TabNavigator from '../TabNavigator'
 import AllSubscriptionsScreen from '@dashboardScreens/AllSubscriptions'
 import AllNewUpdatesScreen from '@dashboardScreens/AllNewUpdates'
+import SearchScreen from '@dashboardScreens/Discover/subscreens/Search'
 
 const RootNavigator = () => {
   const Stack = createNativeStackNavigator()
@@ -22,6 +23,8 @@ const RootNavigator = () => {
           name='AllNewUpdatesScreen'
           component={AllNewUpdatesScreen}
         />
+
+        <Stack.Screen name='SearchScreen' component={SearchScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

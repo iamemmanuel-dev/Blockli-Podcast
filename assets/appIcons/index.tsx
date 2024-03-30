@@ -220,3 +220,23 @@ export const MicIcon = (props: SvgProps) => (
     </Defs>
   </Svg>
 )
+
+export const DeleteIcon = (props: SvgProps) => (
+  <Svg width={24} height={24} fill='none' {...props}>
+    <Path
+      stroke='#757575'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={1.5}
+      d='m14.793 9.194-5.59 5.59M14.8 14.792l-5.6-5.6'
+    />
+    <Path
+      stroke='#757575'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={1.5}
+      d='M1.208 12c0 8.093 2.699 10.792 10.792 10.792S22.792 20.093 22.792 12 20.093 1.21 12 1.21 1.208 3.907 1.208 12Z'
+      clipRule='evenodd'
+    />
+  </Svg>
+)
