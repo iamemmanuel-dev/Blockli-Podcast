@@ -58,7 +58,7 @@ const GetPremiumAdSection = () => {
             right={10}
             zIndex={1000}
             bottom={0}
-            height='90%'
+            height='100%'
             width='50%'
           >
             <UIImage
