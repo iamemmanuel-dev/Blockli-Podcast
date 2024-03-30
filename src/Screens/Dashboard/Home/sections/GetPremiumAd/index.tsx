@@ -11,13 +11,13 @@ const GetPremiumAdSection = () => {
     <Section>
       <Wrapper>
         <UIView
-          height={200}
           radius={32}
           bgCol={theme.primary}
           overflow='hidden'
           px={20}
+          pb={20}
         >
-          <UIView pt={30} width='65%'>
+          <UIView pt={25} width='65%'>
             <UIView mb={20}>
               <UIText
                 family='Urbanist_Bold'
