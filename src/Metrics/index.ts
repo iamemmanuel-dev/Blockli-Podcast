@@ -7,7 +7,8 @@ const metrics = {
   SCREEN_BOTTOM_PADDING: 20,
 
   BASE_GAP: 20,
-  SECTION_TITLE_BOTTOM_MARGIN: 15,
+  SECTIOS_GAP: 30,
+  SECTION_TITLE_BOTTOM_MARGIN: 20,
 
   makeHitSlop: (slop = 20) => ({
     top: slop,
