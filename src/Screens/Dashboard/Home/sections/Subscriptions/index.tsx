@@ -4,11 +4,8 @@ import { useNavigationProp } from '@navigation/index.types'
 import Section from '@Utilities/Section'
 import SectionTitleView from '@Utilities/SectionTitleView'
 import Wrapper from '@Utilities/Wrapper'
-import UIText from '@UILibrary/UIText'
 import UIPressable from '@UILibrary/UIPressable'
 import UIImage from '@UILibrary/UIImage'
-import theme from '@theme'
-import metrics from '@metrics'
 import { SUBSCRIPTIONS } from '@data/index'
 import globalStyles from '@globalStyles'
 
@@ -28,27 +25,11 @@ const SubscriptionsSection = () => {
   return (
     <Section>
       <Wrapper>
-        <SectionTitleView flexDir='row' align='center' justify='space-between'>
-          <UIText
-            family='Urbanist_Bold'
-            size={20}
-            lineHeight={19.2}
-            color={theme.grey3}
-          >
-            Subscriptions
-          </UIText>
-
-          <UIPressable hitSlop={metrics.makeHitSlop()} onPress={onTapOnSeeAll}>
-            <UIText
-              family='Urbanist_Bold'
-              size={16}
-              lineHeight={22.4}
-              color={theme.primary}
-            >
-              See All
-            </UIText>
-          </UIPressable>
-        </SectionTitleView>
+        <SectionTitleView
+          title='Subscriptions'
+          linkText='See All'
+          onTapOnLinkText={onTapOnSeeAll}
+        />
       </Wrapper>
 
       <FlatList
