@@ -55,7 +55,7 @@ const GetPremiumAdSection = () => {
 
           <UIView
             position='absolute'
-            right={10}
+            right={0}
             zIndex={1000}
             bottom={0}
             height='100%'
