@@ -25,16 +25,18 @@ const LibraryScreen = () => {
       <ScreenTitleView title='Library' withMicIcon />
       <Wrapper flex={1}>
         <UITabs tabs={TABS} activeTab={activeTab} onTabSwitch={onTabSwitch} />
-        <UIView my={30}>
+        <UIView>
           {activeTab === 'Subscriptions' ? (
             <FlatList
               data={SUBSCRIPTIONS_LIST}
               renderItem={renderSubscriptions}
+              contentContainerStyle={{ paddingVertical: 30 }}
             />
           ) : (
             <FlatList
               data={Array.from({ length: 10 })}
               renderItem={renderQueues}
+              contentContainerStyle={{ paddingVertical: 30 }}
             />
           )}
         </UIView>
