@@ -2,6 +2,7 @@ import { ListRenderItem } from 'react-native'
 import { FlatList } from 'react-native'
 import Screen from '@Utilities/Screen'
 import Wrapper from '@Utilities/Wrapper'
+import SafeArea from '@Utilities/SafeArea'
 import ScreenTitleView from '@reusables/ScreenTitleView'
 import { SUBSCRIPTIONS_LIST } from '@data/index'
 import { SubscriptionListPropTypes } from '@data/interface'
@@ -15,9 +16,11 @@ const AllSubscriptionsScreen = () => {
   return (
     <Screen>
       <ScreenTitleView title='Subscriptions' withChainIcon />
-      <Wrapper>
+      <Wrapper flex={1}>
         <FlatList data={SUBSCRIPTIONS_LIST} renderItem={renderSubscriptions} />
       </Wrapper>
+
+      <SafeArea />
     </Screen>
   )
 }
