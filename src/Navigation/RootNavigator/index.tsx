@@ -9,6 +9,7 @@ import SearchScreen from '@dashboardScreens/Discover/subscreens/Search'
 import SearchResultScreen from '@dashboardScreens/Discover/subscreens/SearchResult'
 import AllPodcastsScreen from '@dashboardScreens/AllPodcasts'
 import EpisodesAndAuthorsScreen from '@dashboardScreens/EpisodesAndAuthors'
+import PlayerScreen from '@dashboardScreens/Player'
 
 const RootNavigator = () => {
   const Stack = createNativeStackNavigator()
@@ -39,6 +40,14 @@ const RootNavigator = () => {
         <Stack.Screen
           name='EpisodesAndAuthorsScreen'
           component={EpisodesAndAuthorsScreen}
+        />
+
+        <Stack.Screen
+          name='PlayerScreen'
+          component={PlayerScreen}
+          options={{
+            presentation: 'containedModal',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

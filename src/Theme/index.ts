@@ -10,6 +10,7 @@ const theme = {
   grey5: '#BDBDBD',
   grey6: '#F5F5F5',
   grey7: '#EEEEEE',
+  grey8: '#424242',
 }
 
 export default theme

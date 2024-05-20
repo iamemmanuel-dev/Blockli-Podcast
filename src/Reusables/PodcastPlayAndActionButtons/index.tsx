@@ -1,3 +1,5 @@
+import { useNavigation } from '@react-navigation/native'
+import { useNavigationProp } from '@navigation/index.types'
 import { Ionicons } from '@expo/vector-icons'
 import UIPressable from '@UILibrary/UIPressable'
 import UIView from '@UILibrary/UIView'
@@ -7,10 +9,13 @@ import metrics from '@metrics'
 import theme from '@theme'
 
 const PodcastPlayAndActionButtons = () => {
+  const navigation = useNavigation<useNavigationProp>()
+  const onPlay = () => navigation.navigate('PlayerScreen')
+
   return (
     <UIView flexDir='row' align='center'>
       <UIView flex={1} flexDir='row' align='center' colGap={20}>
-        <PlayButton onPlay={() => {}} />
+        <PlayButton onPlay={onPlay} />
         <AddItemIcon />
         <DownloadIcon />
       </UIView>
