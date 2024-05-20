@@ -11,9 +11,9 @@ import globalStyles from '@globalStyles'
 
 const PodcastSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const onTapOnSeeAll = () => {}
+  const onTapOnSeeAll = () => navigation.navigate('AllPodcastsScreen')
 
-  const renderSubscriptions: ListRenderItem<{
+  const renderPodcasts: ListRenderItem<{
     id: number
     image: ImageSourcePropType
   }> = ({ item }) => (
@@ -36,7 +36,7 @@ const PodcastSection = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={SUBSCRIPTIONS}
-        renderItem={renderSubscriptions}
+        renderItem={renderPodcasts}
         contentContainerStyle={
           globalStyles.flatListHoriztontalContentContainerStyle
         }
