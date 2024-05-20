@@ -11,7 +11,8 @@ import globalStyles from '@globalStyles'
 
 const AuthorsSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const onTapOnSeeAll = () => navigation.navigate('EpisodesAndAuthorsScreen')
+  const onTapOnSeeAll = () =>
+    navigation.navigate('EpisodesAndAuthorsScreen', { origin: 'Authors' })
 
   const renderAuthors: ListRenderItem<{
     id: number

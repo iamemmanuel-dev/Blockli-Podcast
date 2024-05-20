@@ -1,3 +1,4 @@
+import { RouteProp } from '@react-navigation/native'
 import {
   NativeStackNavigationProp,
   NativeStackScreenProps,
@@ -9,8 +10,12 @@ export type ScreensParamList = {
   SearchScreen: undefined
   SearchResultScreen: undefined
   AllPodcastsScreen: undefined
-  EpisodesAndAuthorsScreen: undefined
+  EpisodesAndAuthorsScreen: { origin: 'Episodes' | 'Authors' }
 }
 
 export type NavigationProp = NativeStackScreenProps<ScreensParamList>
 export type useNavigationProp = NativeStackNavigationProp<ScreensParamList>
+export type EpisodesAndAuthorsScreenRouteProp = RouteProp<
+  ScreensParamList,
+  'EpisodesAndAuthorsScreen'
+>
