@@ -4,10 +4,15 @@ import UIImage from '@UILibrary/UIImage'
 import theme from '@theme'
 import metrics from '@metrics'
 import PodcastPlayAndActionButtons from '../PodcastPlayAndActionButtons'
+import { PodcastPropTypes } from './interface'
 
-const Podcast = () => {
+const Podcast: React.FC<PodcastPropTypes> = props => {
   return (
-    <UIView flexDir='row' colGap={15} mb={metrics.BASE_GAP}>
+    <UIView
+      flexDir='row'
+      colGap={15}
+      mb={props.isLastItem ? 0 : metrics.BASE_GAP}
+    >
       <UIView flex={0.5} radius={20} height={116}>
         <UIImage source={require('@images/img3.png')} radius={20} />
       </UIView>

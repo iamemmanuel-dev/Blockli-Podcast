@@ -2,8 +2,9 @@ import { FlatList } from 'react-native'
 import Screen from '@Utilities/Screen'
 import GetPremiumAdSection from './sections/GetPremiumAd'
 import HeaderSection from './sections/Header'
-import NewUpdatesSection from './sections/NewUpdates'
-import SubscriptionsSection from './sections/Subscriptions'
+import EpisodesSection from './sections/Episodes'
+import PodcastSection from './sections/Podcasts'
+import AuthorsSection from './sections/Authors'
 
 const HomeScreen = () => {
   return (
@@ -18,8 +19,9 @@ const HomeScreen = () => {
         }
         renderItem={() => (
           <>
-            <SubscriptionsSection />
-            <NewUpdatesSection />
+            <PodcastSection />
+            <EpisodesSection />
+            <AuthorsSection />
           </>
         )}
       />

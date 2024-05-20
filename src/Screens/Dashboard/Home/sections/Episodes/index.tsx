@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native'
+import { FlatList, ListRenderItem } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useNavigationProp } from '@navigation/index.types'
 import Section from '@Utilities/Section'
@@ -6,25 +6,27 @@ import SectionTitleView from '@Utilities/SectionTitleView'
 import Wrapper from '@Utilities/Wrapper'
 import Podcast from '@reusables/Podcast'
 
-const NewUpdatesSection = () => {
+const EpisodesSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const renderNewUpdates = () => <Podcast />
+  const renderEpisodes: ListRenderItem<number> = ({ item, index }) => (
+    <Podcast isLastItem={index === 2} />
+  )
 
-  const onTapOnSeeAll = () => navigation.navigate('AllNewUpdatesScreen')
+  const onTapOnSeeAll = () => {}
 
   return (
     <Section>
       <Wrapper>
         <SectionTitleView
-          title='New Updates'
+          title='Episodes'
           linkText='See All'
           onTapOnLinkText={onTapOnSeeAll}
         />
 
-        <FlatList data={[1, 2, 3]} renderItem={renderNewUpdates} />
+        <FlatList data={[1, 2, 3]} renderItem={renderEpisodes} />
       </Wrapper>
     </Section>
   )
 }
 
-export default NewUpdatesSection
+export default EpisodesSection

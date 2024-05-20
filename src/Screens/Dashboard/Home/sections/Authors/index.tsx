@@ -9,9 +9,9 @@ import UIImage from '@UILibrary/UIImage'
 import { SUBSCRIPTIONS } from '@data/index'
 import globalStyles from '@globalStyles'
 
-const SubscriptionsSection = () => {
+const AuthorsSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const onTapOnSeeAll = () => navigation.navigate('AllSubscriptionsScreen')
+  const onTapOnSeeAll = () => {}
 
   const renderSubscriptions: ListRenderItem<{
     id: number
@@ -26,7 +26,7 @@ const SubscriptionsSection = () => {
     <Section>
       <Wrapper>
         <SectionTitleView
-          title='Subscriptions'
+          title='Podcasts'
           linkText='See All'
           onTapOnLinkText={onTapOnSeeAll}
         />
@@ -45,4 +45,4 @@ const SubscriptionsSection = () => {
   )
 }
 
-export default SubscriptionsSection
+export default AuthorsSection
