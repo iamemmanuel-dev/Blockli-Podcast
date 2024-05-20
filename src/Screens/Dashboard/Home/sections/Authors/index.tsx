@@ -11,9 +11,9 @@ import globalStyles from '@globalStyles'
 
 const AuthorsSection = () => {
   const navigation = useNavigation<useNavigationProp>()
-  const onTapOnSeeAll = () => {}
+  const onTapOnSeeAll = () => navigation.navigate('EpisodesAndAuthorsScreen')
 
-  const renderSubscriptions: ListRenderItem<{
+  const renderAuthors: ListRenderItem<{
     id: number
     image: ImageSourcePropType
   }> = ({ item }) => (
@@ -26,7 +26,7 @@ const AuthorsSection = () => {
     <Section>
       <Wrapper>
         <SectionTitleView
-          title='Podcasts'
+          title='Authors'
           linkText='See All'
           onTapOnLinkText={onTapOnSeeAll}
         />
@@ -36,7 +36,7 @@ const AuthorsSection = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={SUBSCRIPTIONS}
-        renderItem={renderSubscriptions}
+        renderItem={renderAuthors}
         contentContainerStyle={
           globalStyles.flatListHoriztontalContentContainerStyle
         }
